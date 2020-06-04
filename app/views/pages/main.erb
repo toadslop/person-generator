@@ -1,0 +1,17 @@
+<div class="container mt-3">
+<div class="btn btn-primary m-3 mb">
+    <%= link_to "Make a person!", generate_path %>
+</div>
+<% if @person %>
+    <% @person.each do |key, value| %>
+    <div class="row">
+        <div class="col-2">
+            <p><b><%= key.capitalize %>:</b></p>
+        </div>
+        <div class="col-6">
+            <p><%= value %></p>
+        </div>
+    </div>
+    <% end %>
+<% end %>
+</div>
